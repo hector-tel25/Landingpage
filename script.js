@@ -93,33 +93,44 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', checkScroll);
     checkScroll(); // Verificar al cargar la página
     
-    // Validación básica del formulario
+    // Validación y envío del formulario con Formspree
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
-            
+
             // Validación básica
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
-            
+
             if (!name || !email || !subject || !message) {
                 alert('Por favor, completa todos los campos del formulario.');
                 return;
             }
-            
-            // Validación de email básica
+
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
                 alert('Por favor, ingresa un email válido.');
                 return;
             }
-            
-            // Aquí normalmente enviarías el formulario
-            alert('¡Gracias por tu mensaje! Te contactaré pronto.');
-            contactForm.reset();
+
+            // Envío con Formspree
+            const formData = new FormData(contactForm);
+
+            const response = await fetch(contactForm.action, {
+                method: contactForm.method,
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                alert('¡Gracias por tu mensaje! Te contactaré pronto.');
+                contactForm.reset();
+            } else {
+                alert('Hubo un problema al enviar el mensaje. Intenta más tarde.');
+            }
         });
     }
 });
