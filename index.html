@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CreatiPress - Desarrollo Web Profesional</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header con navegación mejorada -->
+  <header class="fixed w-full z-50 transition-all duration-500" id="main-header">
+    <div class="header-inner">
+      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#" class="logo">
+          <span class="logo-icon"><i class="fas fa-code"></i></span>
+          <span class="logo-text">CreatiPress</span>
+        </a>
+        
+        <!-- Menú desktop -->
+        <nav class="desktop-nav">
+          <a href="#inicio" class="nav-link">Inicio</a>
+          <a href="#servicios" class="nav-link">Servicios</a>
+          <a href="#proceso" class="nav-link">Proceso</a>
+          <a href="#contacto" class="nav-link">Contacto</a>
+        </nav>
+        
+        <a href="#contacto" class="cta-button desktop-cta">
+          Contáctame
+        </a>
+        
+        <!-- Botón móvil -->
+        <button class="mobile-menu-button" id="mobile-menu-button">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      
+      <!-- Menú móvil -->
+      <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-content">
+          <a href="#inicio" class="mobile-nav-link">Inicio</a>
+          <a href="#servicios" class="mobile-nav-link">Servicios</a>
+          <a href="#proceso" class="mobile-nav-link">Proceso</a>
+          <a href="#contacto" class="mobile-nav-link">Contacto</a>
+          <a href="#contacto" class="mobile-cta-button">
+            Contáctame
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section mejorada -->
+  <section id="inicio" class="hero-section">
+    <!-- Elementos decorativos -->
+    <div class="hero-decorations">
+      <div class="decoration-circle circle-1"></div>
+      <div class="decoration-circle circle-2"></div>
+      <div class="decoration-circle circle-3"></div>
+    </div>
+    
+    <div class="hero-content">
+      <h1 class="hero-title" id="typed-title"></h1>
+      
+      <p class="hero-description">
+        En el mundo digital, tu sitio web es tu carta de presentación. 
+        Te ayudo a crear experiencias únicas para que tu negocio crezca en Internet 🚀
+      </p>
+      
+      <div class="hero-buttons">
+        <a href="#contacto" class="primary-button">
+          <span>Pedí tu presupuesto sin cargo</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#servicios" class="secondary-button">
+          Ver servicios
+        </a>
+      </div>
+      
+      <div class="hero-scroll-indicator">
+        <a href="#servicios">
+          <i class="fas fa-chevron-down"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services mejorado -->
+  <section id="servicios" class="services-section">
+    <div class="container mx-auto">
+      <div class="section-header">
+        <h2 class="section-title">Servicios que ofrezco</h2>
+        <p class="section-subtitle">Soluciones digitales personalizadas para hacer crecer tu negocio en internet</p>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card service-card-1">
+          <div class="service-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <h3 class="service-title">Sitios web profesionales</h3>
+          <p class="service-description">Diseños modernos, responsivos y optimizados para todos los dispositivos, con la mejor experiencia de usuario.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> Diseño personalizado</li>
+            <li><i class="fas fa-check-circle"></i> Responsive design</li>
+            <li><i class="fas fa-check-circle"></i> Dominio y hosting</li>
+          </ul>
+        </div>
+        
+        <div class="service-card service-card-2">
+          <div class="service-icon">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <h3 class="service-title">Tiendas online</h3>
+          <p class="service-description">E-commerce completos con pasarelas de pago, gestión de productos y optimizados para maximizar tus ventas.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> Pasarelas de pago</li>
+            <li><i class="fas fa-check-circle"></i> Panel administrativo</li>
+            <li><i class="fas fa-check-circle"></i> Optimizado para ventas</li>
+          </ul>
+        </div>
+        
+        <div class="service-card service-card-3">
+          <div class="service-icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <h3 class="service-title">Optimización SEO</h3>
+          <p class="service-description">Mejora tu visibilidad en Google con técnicas avanzadas de SEO que posicionarán tu sitio en los primeros resultados.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> SEO técnico</li>
+            <li><i class="fas fa-check-circle"></i> Contenido optimizado</li>
+            <li><i class="fas fa-check-circle"></i> Análisis de keywords</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proceso de trabajo -->
+  <section id="proceso" class="process-section">
+    <div class="container mx-auto">
+      <div class="section-header">
+        <h2 class="section-title">¿Cómo trabajo?</h2>
+        <p class="section-subtitle">Un proceso claro y eficiente para lograr los mejores resultados</p>
+      </div>
+      
+      <div class="process-steps">
+        <div class="process-connector"></div>
+        
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <h3 class="step-title">Consulta</h3>
+          <p class="step-description">Analizamos tus necesidades y objetivos para tu proyecto.</p>
+        </div>
+        
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <h3 class="step-title">Diseño</h3>
+          <p class="step-description">Creo un diseño personalizado que se adapte a tu marca.</p>
+        </div>
+        
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <h3 class="step-title">Desarrollo</h3>
+          <p class="step-description">Programo tu sitio web con las últimas tecnologías.</p>
+        </div>
+        
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <h3 class="step-title">Lanzamiento</h3>
+          <p class="step-description">Publicamos tu sitio y monitoreamos su performance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact mejorado -->
+  <section id="contacto" class="contact-section">
+    <div class="container mx-auto">
+      <div class="section-header">
+        <h2 class="section-title">📩 Mandame un mensaje hoy</h2>
+        <p class="section-subtitle">Pedí tu presupuesto sin cargo y llevá tu marca al siguiente nivel ✨</p>
+      </div>
+      
+      <div class="contact-form-container">
+        <form class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Asunto</label>
+            <input type="text" id="subject" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="submit-button">
+            Enviar mensaje
+          </button>
+        </form>
+        
+        <div class="contact-info">
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-details">
+              <p class="contact-type">Email</p>
+              <p class="contact-value">creatipress@gmail.com</p>
+            </div>
+          </div>
+          
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-details">
+              <p class="contact-type">Teléfono</p>
+              <p class="contact-value">+54 9 3624047605</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer mejorado -->
+  <footer class="footer">
+    <div class="container mx-auto">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 class="footer-title">
+            <span class="footer-logo-icon"><i class="fas fa-code"></i></span>
+            CreatiPress
+          </h3>
+          <p class="footer-description">Desarrollo web profesional para hacer crecer tu negocio en internet.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h3 class="footer-title">Enlaces rápidos</h3>
+          <ul class="footer-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#proceso">Proceso</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3 class="footer-title">Servicios</h3>
+          <ul class="footer-links">
+            <li><a href="#">Sitios web</a></li>
+            <li><a href="#">Tiendas online</a></li>
+            <li><a href="#">SEO</a></li>
+            <li><a href="#">Mantenimiento</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 CreatiPress. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
